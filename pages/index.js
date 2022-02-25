@@ -9,7 +9,7 @@ const Home = () => {
 	const [input, setInput] = useState("");
 	const fetcher = (url) => axios.get(url).then((res) => res.data);
 	const { data } = useSWR(
-		`http://localhost:3000/api/users/${input}`,
+		`https://ecommerce-api-gamma.vercel.app/api/users/${input}`,
 		fetcher
 	);
 
